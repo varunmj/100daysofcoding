@@ -17,8 +17,10 @@ Note: in a word only the first character is capitalized. Example 12abc when capi
 
 # Complete the solve function below.
 def solve(s):
-    i = s.title()
-    return i
+    
+    for i in s.split():
+        s = s.replace(i,i.capitalize())
+    return s
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
